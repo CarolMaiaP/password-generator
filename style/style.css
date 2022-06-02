@@ -83,6 +83,28 @@ body{
   transform: scale(1.05);
 }
 
+.tooltip{
+  position: relative;
+  top: 20px;
+  padding: 6px 8px;
+  background: rgb(15, 15, 15);
+  font-size: 16px;
+  border-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.container-password:hover .tooltip{
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+
+.hide{
+  display: none;
+}
+
 .container-password span{
   color: #fff;
   display: flex;
@@ -90,3 +112,4 @@ body{
   justify-content: center;
   margin-top: 10px;
 }
+
