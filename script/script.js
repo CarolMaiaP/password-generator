@@ -14,6 +14,7 @@ console.log(password);
 let charset =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%&*";
 
+let novaSenha = "";
 sizePassword.innerHTML = sliderElement.value;
 
 slider.oninput = function () {
@@ -30,4 +31,10 @@ function generatePassword() {
   containerPassword.classList.remove("hide");
   console.log(pass);
   password.innerHTML = pass;
+  novaSenha = pass;
+}
+
+function copyPassword() {
+  alert("Senha copiada com sucesso!");
+  navigator.clipboard.writeText(novaSenha);
 }
